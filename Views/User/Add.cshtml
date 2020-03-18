@@ -1,0 +1,27 @@
+﻿@using System;
+
+<h1>Add User</h1>
+
+@if (!ViewBag.username.Equals(""))
+{
+    <p>Invalid password. Make sure password is entered the same twice.</p>
+    <form method="post">
+        <label>Username: </label><input name="username" type="text" value=@ViewBag.username />
+        <label>Email: </label><input name="email" type="text" value="@ViewBag.email"/>
+        <label>Password: </label><input name="password" type="password" />
+        <label>Verify Password: </label><input name="verify" type="password" />
+        <input type="submit" value="Add user" />
+    </form>
+}
+else
+{
+    <form method="post">
+        <label>Username: </label><input name="username" type="text" />
+        <label>Email: </label><input name="email" type="text" />
+        <label>Password: </label><input name="password" type="password" />
+        <label>Verify Password: </label><input name="verify" type="password" />
+        <input type="submit" value="Add user" />
+    </form>
+}
+
+

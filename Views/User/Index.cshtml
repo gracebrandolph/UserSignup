@@ -1,0 +1,10 @@
+﻿@using System;
+
+<h1>User Page</h1>
+
+<p><a asp-controller="User" asp-action="Add">Add User</a></p>
+
+@if (!ViewBag.username.Equals(""))
+{
+<p>Hello @ViewBag.username</p>
+}
